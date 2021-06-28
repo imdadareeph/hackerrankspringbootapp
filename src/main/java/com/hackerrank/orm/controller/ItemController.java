@@ -83,10 +83,10 @@ public class ItemController {
 
     //7. filters by fields ?itemStatus={status}&itemEnteredByUser={modifiedBy} GET
 
-    @RequestMapping(value = "/app/item?itemStatus={status}&itemEnteredByUser={enteredBy}", method = RequestMethod.GET)
+    @RequestMapping(value = "/app/itemstatus", method = RequestMethod.GET)
     public @ResponseBody
-    List<Item> getItemsByStatusAndUser(@PathVariable ItemStatus status, @PathVariable String enteredBy) {
-        return (List<Item>) itemService.getItemsByStatusAndUser(status,enteredBy);
+    List<Item> getItemsByStatusAndUser(@RequestParam(name = "itemStatus") ItemStatus itemStatus, @RequestParam String enteredBy) {
+        return (List<Item>) itemService.getItemsByStatusAndUser(itemStatus,enteredBy);
     }
 
 
