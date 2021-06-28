@@ -6,6 +6,7 @@ import com.hackerrank.orm.exception.ResourceNotFoundException;
 import com.hackerrank.orm.model.Item;
 import com.hackerrank.orm.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -91,10 +92,10 @@ public class ItemController {
 
     //8. select all with sorting and pagination ?pageSize={pageSize}&page={page}&sortBy={sortBy} GET
 
-    @RequestMapping(value = "app/item?pageSize={pageSize}&page={page}&sortBy={sortByField}", method = RequestMethod.GET)
+    @RequestMapping(value = "app/item", method = RequestMethod.GET)
     public @ResponseBody
-    List<Item> getSortedItemsWithPagination(@PathVariable int pageSize, @PathVariable int page, @PathVariable String sortByField) {
-        return (List<Item>) itemService.getSortedItemsWithPagination(pageSize,page,sortByField);
+    Page<Item> getSortedItemsWithPagination(@RequestParam(name = "pageSize") int pageSize, @RequestParam int page, @RequestParam String sortByField) {
+        return  itemService.getSortedItemsWithPagination(pageSize,page,sortByField);
     }
 
 }
