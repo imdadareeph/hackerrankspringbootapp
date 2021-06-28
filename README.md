@@ -26,7 +26,7 @@ curl -X 'GET' \
   -H 'accept: */*'
 ```
 
-![alt text](https://raw.githubusercontent.com/imdadareeph/hackerrankspringbootapp/main/screenshots/3ItemsById.png "preview3")
+![alt text](https://raw.githubusercontent.com/imdadareeph/hackerrankspringbootapp/main/screenshots/5ItemsById.png "preview3")
 
 
 ```console
