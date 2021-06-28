@@ -18,7 +18,7 @@ public class Application {
     public OpenAPI customOpenAPI(@Value("${application-description}") String appDesciption, @Value("${application-version}") String appVersion) {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Bookstore application API")
+                        .title("hackersrankspringbootapp application API")
                         .version(appVersion)
                         .description(appDesciption)
                         .termsOfService("http://swagger.io/terms/")
