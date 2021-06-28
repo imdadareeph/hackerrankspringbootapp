@@ -1,0 +1,26 @@
+add items
+
+curl -X POST \
+  http://localhost:8000/app/item \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 641fe838-51f5-4249-a55b-ffed519e1e16' \
+  -H 'accept: */*' \
+  -H 'cache-control: no-cache' \
+  -d '{
+  "itemId":1,
+      "itemName":"item_x",
+      "itemEnteredByUser":"user_x",
+      "itemEnteredDate":"2020-05-10T13:00:41.499",
+      "itemBuyingPrice":50.0,
+      "itemSellingPrice":55.0,
+      "itemLastModifiedDate":"2020-05-10T13:00:41.498",
+      "itemLastModifiedByUser":"user_y",
+      "itemStatus":"AVAILABLE"
+}'
+
+
+
+
+curl -X 'GET' \
+  'http://localhost:8000/app/item' \
+  -H 'accept: */*'
