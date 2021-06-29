@@ -1,6 +1,19 @@
 # hackerrankspringbootapp
 hackerrankspringbootapp
 
+## Available online to test
+
+https://hackersrankspringbootapp.herokuapp.com/swagger-ui/index.html?configUrl=/v3/api-docs/swagger-config#/
+
+https://hackersrankspringbootapp.herokuapp.com/h2-console
+```console
+Note : for h2db use
+Driver Class : org.h2.Driver
+JDBC URL: jdbc:h2:mem:testdb
+User Name: sa
+Password: blank
+```
+
 ```console
 curl -X 'POST' \
   'http://localhost:8000/app/item' \
